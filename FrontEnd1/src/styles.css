@@ -36,11 +36,12 @@
     width: 30wh;
     height: 30vh;
     color: #fff;
-    background: linear-gradient(89deg, #FF5EDF 0%, #04C8DE 100%);
-    background-size: 400% 400%;
+    /* background: #13B5EA */
+    background: linear-gradient(180deg, #00205B 0%, #04C8DE 100%);
+    /* background-size: 400% 400%;
     -webkit-animation: Gradient 15s ease infinite;
     -moz-animation: Gradient 15s ease infinite;
-    animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite; */
 }
 
 @-webkit-keyframes Gradient {
@@ -87,4 +88,8 @@
     left: 0;
     right: 0;
     z-index: -1
+}
+
+.nav {
+    background-color: #00205B;
 }

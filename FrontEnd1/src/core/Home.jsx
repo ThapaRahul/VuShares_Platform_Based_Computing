@@ -37,6 +37,7 @@ const Home = () => {
 
     return (
     <Layout title="Welcome to VuShares" description="A platform that allows Villanova community to buy and sell items as well as services" className="container-fluid">
+        <Search />
         <h2 className="mb-4">Best Sellers</h2>
         <div className="row">
             {productsBySell.map((product, i) => (

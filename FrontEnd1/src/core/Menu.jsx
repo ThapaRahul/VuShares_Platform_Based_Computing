@@ -1,6 +1,9 @@
 import React, {Fragment} from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import {signout, isAuthenticated} from '../auth';
+import '../styles.css'
+
+
 const isActive = (history, path) => {
     if(history.location.pathname === path) {
         return {color: '#ff9900'};
@@ -11,7 +14,7 @@ const isActive = (history, path) => {
 
 const Menu = ({history}) => (
     <div>
-        <ul className="nav nav-tabs bg-primary">
+        <ul className="nav nav-tabs bg" >
             <li className="nav-item">
                 <Link className="nav-link" style={isActive(history, '/')} to="/">
                 VuShares
