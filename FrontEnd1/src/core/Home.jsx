@@ -35,7 +35,7 @@ const Home = () => {
 
 
     return (
-    <Layout title="Home Page" description="Node React E-commerce App" className="container-fluid">
+    <Layout title="Welcome to VuShares" description="A platform that allows Villanova community to buy and sell items as well as services" className="container-fluid">
         <h2 className="mb-4">Best Sellers</h2>
         <div className="row">
             {productsBySell.map((product, i) => (
