@@ -1,12 +1,12 @@
-import {API} from"../config";
+import {API} from '../config';
 
 export const createCategory = (userId, token, category) => {
-    return fetch('${API}/category/create/${userId}', {
+    return fetch(`${API}/category/create/${userId}`, {
         method: "POST",
         headers: {
             Accept: "application/json",
             "Content-Type": "application/json",
-            Authorization: 'Bearer ${token}'
+            Authorization: `Bearer ${token}`
         }, 
         body: JSON.stringify(category)
     })
@@ -19,11 +19,11 @@ export const createCategory = (userId, token, category) => {
 };
 
 export const createProduct = (userId, token, product) => {
-    return fetch('${API}/product/create/${userId}', {
+    return fetch(`${API}/product/create/${userId}`, {
         method: "POST",
         headers: {
             Accept: "application/json",
-            Authorization: 'Bearer ${token}'
+            Authorization: `Bearer ${token}`
         }, 
         body: product
     })
@@ -36,7 +36,7 @@ export const createProduct = (userId, token, product) => {
 };
 
 export const getCategories = () => {
-    return fetch('${API}/categories', {
+    return fetch(`${API}/categories`, {
         method: "GET"
     })
     .then(response => {

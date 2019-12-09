@@ -66,8 +66,7 @@ const AddProduct = () => {
             event.preventDefault()
             setValues({...values, error: '', loading: true})
 
-            createProduct(user._id, token, formData)
-            .then(data => {
+            createProduct(user._id, token, formData).then(data => {
                 if(data.error) {
                     setValues({...values, error: data.error})
                 } else {
@@ -173,8 +172,8 @@ const AddProduct = () => {
         )
 
         const showSuccess = () => (
-            <div className="alert alert-danger" style={{display: createProduct ? '' : 'none'}}>
-                <h2>{'${createdProduct}'} is created!</h2>
+            <div className="alert alert-info" style={{display: createdProduct ? '' : 'none'}}>
+                <h2>{`${createdProduct}`} is created!</h2>
             </div>
         )
 
@@ -185,7 +184,7 @@ const AddProduct = () => {
         return(
             <Layout
                 title="Add a new product"
-                description={'Hello ${user.name}, ready to add a new product?'}
+                description={`Hello ${user.name}, ready to add a new product?`}
                 >
                     <div className="row">
                         <div className="col-md-8 offset-md-2">
